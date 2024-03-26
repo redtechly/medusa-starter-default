@@ -5,16 +5,7 @@
   "logo": "https://i.imgur.com/uQX4otM.png",
   "keywords": ["node", "express", "ecommerce", "medusa", "ecommerce platform"],
   "success_url": "/store/products",
-  "addons": [
-    {
-      "plan": "stackhero-redis",
-      "as": "REDIS"
-    },
-    {
-      "plan": "heroku-postgresql",
-      "as": "DATABASE"
-    }
-  ],
+  "addons": [],
   "env": {
     "JWT_SECRET": {
       "description": "Secret used to sign JWT tokens",
