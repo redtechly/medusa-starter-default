@@ -6,12 +6,8 @@ services:
       dockerfile: Dockerfile
     image: backend:starter
     container_name: medusa-server-default
-    depends_on:
-      - postgres
-      - redis
     environment:
       DATABASE_URL: postgres://admin:yIeXp3ImbRDZqowWM2iqE15KGeakcjp4@z4r7y2.stackhero-network.com:5432/admin?sslmode=require
-      REDIS_URL: redis://redis
       NODE_ENV: development
       JWT_SECRET: something
       COOKIE_SECRET: something
@@ -21,20 +17,6 @@ services:
     volumes:
       - .:/app/medusa
       - node_modules:/app/medusa/node_modules
-
-  postgres:
-    image: postgres:10.4
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: medusa-docker
-
-  redis:
-    image: redis
-    expose:
-      - 6379
 
 volumes:
   node_modules:
