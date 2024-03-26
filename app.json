@@ -5,16 +5,7 @@
   "logo": "https://i.imgur.com/uQX4otM.png",
   "keywords": ["node", "express", "ecommerce", "medusa", "ecommerce platform"],
   "success_url": "/store/products",
-  "addons": [
-    {
-      "plan": "stackhero-redis",
-      "as": "REDIS"
-    },
-    {
-      "plan": "heroku-postgresql",
-      "as": "DATABASE"
-    }
-  ],
+  "addons": [],
   "env": {
     "JWT_SECRET": {
       "description": "Secret used to sign JWT tokens",
@@ -28,6 +19,16 @@
       "description": "URL of the Medusa admin",
       "required": false,
       "value": "http://localhost:7000,http://localhost:7001"
+    },
+    "DATABASE_TYPE": {
+      "description": "the Medusa Dataase type",
+      "required": true,
+      "value": "postgres"
+    },
+    "DATABASE_URL": {
+      "description": "URL of the Medusa Dataase",
+      "required": true,
+      "value": "postgres://admin:yIeXp3ImbRDZqowWM2iqE15KGeakcjp4@z4r7y2.stackhero-network.com:5432/admin?sslmode=require"
     },
     "STORE_CORS": {
       "description": "URL of the Medusa storefront",
