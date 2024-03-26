@@ -10,7 +10,7 @@ services:
       - postgres
       - redis
     environment:
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/medusa-docker
+      DATABASE_URL: postgres://admin:yIeXp3ImbRDZqowWM2iqE15KGeakcjp4@z4r7y2.stackhero-network.com:5432/admin?sslmode=require
       REDIS_URL: redis://redis
       NODE_ENV: development
       JWT_SECRET: something
